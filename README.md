@@ -1,8 +1,12 @@
-# flutter_projects
+# BMI Calculator App
 
-A new Flutter project.
-
-## Getting Started
+A new Flutter project. Bodymass index calculator which allows you to insert your height, mass 
+and then you can calculate to see if you are uder weight, above weight or normal weight.    
+## Color Used:
+  Hexcolor- Black, yellow
+  
+  
+### Getting Started
 
 This project is a starting point for a Flutter application.
 
