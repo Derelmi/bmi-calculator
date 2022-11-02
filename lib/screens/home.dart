@@ -2,7 +2,6 @@ import 'package:flutter_projects/constants/app_constants.dart';
 import 'package:flutter_projects/widgets/left_bar.dart';
 import 'package:flutter_projects/widgets/right_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/constants/app_constants.dart';
 
 class HomeScreen extends StatefulWidget {
   // const name({super.key});
@@ -14,10 +13,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "DEREL Calculator",
+          "DEREL BMI Calculator",
           style: TextStyle(color: accentHexColor, fontWeight: FontWeight.w300),
         ),
         backgroundColor: Colors.transparent,
@@ -30,7 +30,30 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           SizedBox(
             height: 20,
-          ),
+          ),Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              width: 130,
+              child: TextField(
+                style: TextStyle(
+                  fontSize: 42,
+                  fontWeight: FontWeight.w300,
+                  color: accentHexColor
+                ),
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  hintText: "Height",
+                  hintStyle: TextStyle(
+                    fontSize: 42,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.white.withOpacity(.8)
+                    ),
+                ),
+              ),
+            )
+
+          ],)
         ],
       )),
     );
