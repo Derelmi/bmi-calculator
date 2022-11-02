@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'DEREL BMI Calculator',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.yellow,visualDensity: VisualDensity.adaptivePlatformDensity,
+      theme: ThemeData(primarySwatch: Colors.blue,visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomeScreen(),
     );

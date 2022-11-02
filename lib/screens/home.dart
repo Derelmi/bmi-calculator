@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, sized_box_for_whitespace, use_key_in_widget_constructors
+
 import 'package:flutter_projects/constants/app_constants.dart';
 import 'package:flutter_projects/widgets/left_bar.dart';
 import 'package:flutter_projects/widgets/right_bar.dart';
@@ -13,7 +15,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    
+    // var barWidth;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -38,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: TextStyle(
                   fontSize: 42,
                   fontWeight: FontWeight.w300,
-                  color: accentHexColor
+                  color: Colors.white
                 ),
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
@@ -51,10 +54,58 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                 ),
               ),
+            ),
+            Container( width: 130,
+              child: TextField(
+                style: TextStyle(
+                  fontSize: 42,
+                  fontWeight: FontWeight.w300,
+                  color:Colors.white
+                ),
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  hintText: "Weight",
+                  hintStyle: TextStyle(
+                    fontSize: 42,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.white.withOpacity(.8)
+                    ),
+                     ),
+              ),
             )
 
-          ],)
-        ],
+          ],),
+         const SizedBox(height: 30,),
+          Container(
+            child: Text("Calculate", style:TextStyle(fontSize: 22,fontWeight: FontWeight.bold, color: accentHexColor),),
+          ),
+          const SizedBox(height: 50,),
+          Container(
+            child: Text("10", style: TextStyle(fontSize: 50, color:Colors.white),),
+          ),
+          const SizedBox(height: 30,),
+          Container(
+             child: Text("Normal weight", style: TextStyle(fontSize: 22,fontWeight: FontWeight.w400, color: accentHexColor),),
+          ),
+          
+           SizedBox(height: 10,),
+           LeftBar(barWidth:40,),
+           SizedBox(height: 20,),
+           LeftBar(barWidth:70,),
+           SizedBox(height: 20,),
+           LeftBar(barWidth:40,),
+
+
+           SizedBox(height: 20,),
+           RightBar(barWidth:40,),
+           SizedBox(height: 20,),
+           RightBar(barWidth:70,),
+           SizedBox(height: 20,),
+           RightBar(barWidth:100,),
+          
+
+          ],
       )),
     );
   }

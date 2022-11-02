@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
  import 'package:flutter_projects/constants/app_constants.dart';
 
 class LeftBar extends StatelessWidget {
-  var barWidth;
+  final double barWidth;
 
   // final double barWidth;
-// const LeftBar({Key key, required this.barWidth}) : super(key: key);
- // get barWidth => null;
+const LeftBar({Key? key, required this.barWidth}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +18,12 @@ class LeftBar extends StatelessWidget {
           width: barWidth,
           // width: 100,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(20),
               bottomLeft: Radius.circular(20),
             ),
-         color: accentHexColor),
+         color: accentHexColor ),
+        
         ),
       ],
     );
